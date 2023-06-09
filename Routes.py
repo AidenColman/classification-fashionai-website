@@ -31,3 +31,7 @@ def predict():
 
 if __name__ == "__main__": 
     app.run(debug=True)
+
+@app.route('/teachable') 
+def teachable(): 
+    return render_template('teachable.html')
