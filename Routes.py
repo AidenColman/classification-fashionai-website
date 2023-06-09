@@ -15,10 +15,9 @@ def home():
 
 def predict_image(image): 
     image = image.reshape(1, 28, 28)
-
-prediction = loaded_model.predict(image)
-predicted_class = np.argmax(prediction) 
-return class_names[predicted_class]
+    prediction = loaded_model.predict(image)
+    predicted_class = np.argmax(prediction) 
+    return class_names[predicted_class]
 
 @app.route('/predict', methods=['POST']) 
 def predict(): 
